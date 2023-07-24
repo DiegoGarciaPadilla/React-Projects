@@ -3,9 +3,9 @@ import { useState } from "react";
 export function TwitterFollowCard({
   children,
   userName = "unknown",
-  isFollowing = false,
+  initialIsFollowing = false,
 }) {
-  const [state, setState] = useState(isFollowing);
+  const [state, setState] = useState(initialIsFollowing);
   const text = state ? "Siguiendo" : "Seguir";
   const buttonClassName = state
     ? "tw-followCard-button is-following"
