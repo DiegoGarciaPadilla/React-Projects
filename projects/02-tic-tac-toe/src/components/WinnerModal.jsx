@@ -1,4 +1,5 @@
 import Square from "./Square";
+import PropTypes from "prop-types";
 
 function WinnerModal({ winner, resetGame }) {
   // Si el ganador es null, no mostrar nada
@@ -18,5 +19,10 @@ function WinnerModal({ winner, resetGame }) {
     </section>
   );
 }
+
+WinnerModal.propTypes = {
+  winner: PropTypes.bool,
+  resetGame: PropTypes.func.isRequired,
+};
 
 export default WinnerModal;
